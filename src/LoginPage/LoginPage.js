@@ -77,7 +77,10 @@ const LoginPage = (props) => {
         <button type="submit" style={{marginLeft:'50px',fontWeight:'600',letterSpacing:'0.05em', color:'green'}}>Login</button>
         <br />
         <br />
-        <label> Click on Signup in the menu to create an account </label>
+        <label> Click on Create Account in the menu to create an account </label>
+        <br/>
+        <br/>
+      <span class="psw"><a href="#">Forgot password?</a></span>
       </form>
     </section>
   </section>

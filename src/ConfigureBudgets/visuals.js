@@ -111,10 +111,10 @@ function Visuals() {
   },[selectedMonth])
 
   
-  const createPolarareaChart = (chartRef, data, labels) => {
+  const createPieChart = (chartRef, data, labels) => {
     if (chartRef.current) {
       const chart = new Chart(chartRef.current, {
-        type: 'polarArea',
+        type: 'pie',
         data: {
           datasets: [
             {
@@ -173,9 +173,6 @@ function Visuals() {
     }
   };
 
-
-
-
   const createdonutChart = (chartRef, data, labels) => {
     if (chartRef.current) {
       const chart = new Chart(chartRef.current, {
@@ -230,9 +227,6 @@ function Visuals() {
     }
   };
 
-
-
-
   const chartRef = useRef(null);
   const expenseRef = useRef(null);
   const chart1Ref = useRef(null);
@@ -242,8 +236,8 @@ function Visuals() {
   const chart5Ref = useRef(null);
   
 
-  useEffect(() => createPolarareaChart(chartRef, dataSource.datasets[0].budget, dataSource.labels1), [dataSource]);
-  useEffect(() => createPolarareaChart(expenseRef, dataSource.datasets[0].expense, dataSource.labels2), [dataSource]);
+  useEffect(() => createPieChart(chartRef, dataSource.datasets[0].budget, dataSource.labels1), [dataSource]);
+  useEffect(() => createPieChart(expenseRef, dataSource.datasets[0].expense, dataSource.labels2), [dataSource]);
   useEffect(() => createGroupedBarChart(chart1Ref, dataSource.labels1, dataSource.datasets[0].budget, dataSource.datasets[0].expense), [dataSource]);
   useEffect(() => createdonutChart(chart3Ref,  dataSource.datasets[0].budget,dataSource.labels1,), [dataSource]);
   useEffect(() => createdonutChart(chart4Ref,  dataSource.datasets[0].expense,dataSource.labels1,), [dataSource]);
@@ -267,28 +261,36 @@ function Visuals() {
              dataExists ? (
               <section>
       <section className="chart-container">
-        <article className="chart">
-          <h1>Polar Area Chart - Budget</h1>
-          <p>
-            <canvas ref={chartRef} />
-          </p>
-        </article>
-        <article className="chart">
-          <h1>Polar Area Chart - Expenses</h1>
-          <p>
-            <canvas ref={expenseRef} />
-          </p>
-        </article>
-        <article className="chart">
+      <article className="chart">
           <h1>Grouped Bar Chart</h1>
           <p>
             <canvas ref={chart1Ref} />
           </p>
         </article>
+        <article className="chart">
+          <h1>Pie Chart - Budget</h1>
+          <p>
+            <canvas ref={chartRef} />
+          </p>
+        </article>
+        <article className="chart">
+          <h1>Pie Chart - Expenses</h1>
+          <p>
+            <canvas ref={expenseRef} />
+          </p>
+        </article>
+        
        
       </section>
+      <section className="chart-container">
+      <article className="chart">
+         <h1>Combo Chart</h1>
+         <p>
+           <canvas ref={chart5Ref} />
+         </p>
+       </article>
      
-       <section className="chart-container">
+
        <article className="chart">
           <h1>Donught Chart- Budgets</h1>
           <p>
@@ -301,12 +303,7 @@ function Visuals() {
            <canvas ref={chart4Ref} />
          </p>
        </article>
-       <article className="chart">
-         <h1>Combo Chart</h1>
-         <p>
-           <canvas ref={chart5Ref} />
-         </p>
-       </article>
+       
        </section>
        </section>
      

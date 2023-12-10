@@ -5,9 +5,7 @@ import { LogoutPage } from "../LogoutPage/LogoutPage";
 function Menu(){
   const { isLoggedIn, logout } = useAuth();
   const handlelogout = () => {
-    
     logout();
-    
     localStorage.removeItem("userId");
     localStorage.removeItem("token");
     localStorage.removeItem('expirationTime');
@@ -43,7 +41,7 @@ function Menu(){
                 <Link to="/login">Login</Link>
               </li>
               <li>
-                <Link to="/signup">Signup</Link>
+                <Link to="/signup">Create Account</Link>
               </li>
             </>
           )}
