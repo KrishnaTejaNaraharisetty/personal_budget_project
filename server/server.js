@@ -13,7 +13,6 @@ let url = "mongodb://127.0.0.1:27017/personal-budget";
 
 const bcrypt = require("bcrypt");
 const port = 3002;
-const budget = require("./server.json");
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -40,9 +39,7 @@ app.get("/intro", (req, res) => {
   res.send("Hello world");
 });
 
-app.get("/budget", (req, res) => {
-  res.json(budget);
-});
+
 
 app.get("/get-categories/:userId", async (req, res) => {
   const { userId } = req.params;
