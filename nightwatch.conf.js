@@ -40,7 +40,7 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
-      launch_url: 'http://localhost',
+      launch_url: 'http://159.203.70.22',
 
       screenshots: {
         enabled: false,
@@ -106,7 +106,7 @@ module.exports = {
           args: [
             //'--no-sandbox',
             //'--ignore-certificate-errors',
-            //'--allow-insecure-localhost',
+            //'--allow-insecure-159.203.70.22',
             //'--headless'
           ]
         }

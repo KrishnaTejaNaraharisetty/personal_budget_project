@@ -13,7 +13,7 @@ eyes.setApiKey('OFs6s2SGUhtmc4iflDL67c88Ws8Tja5azQyZv104d5zCI110');
 
 // Your TestCafe test
 fixture('Visual Testing Example')
-  .page('http://localhost:3001/login');
+  .page('http://159.203.70.22:3001/login');
 
 test('Check the entire page', async t => {
   // Open the eyes and start the visual test
