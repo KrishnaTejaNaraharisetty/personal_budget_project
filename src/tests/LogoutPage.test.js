@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import LogoutPage from './LogoutPage';
+import LogoutPage from '../LogoutPage/LogoutPage';
 
 describe('LogoutPage Component', () => {
   it('should call onLogout when the logout button is clicked', () => {

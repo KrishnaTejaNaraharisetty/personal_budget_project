@@ -58,6 +58,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "@babel/preset-react": "^7.23.3",
+    "cypress": "^13.6.1",
     "webpack-cli": "^5.1.4",
     "webpack-node-externals": "^3.0.0"
   },
