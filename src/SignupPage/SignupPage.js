@@ -22,7 +22,7 @@ function SignupPage() {
   const handleSignup = async (e) => {
     e.preventDefault();
     axios
-    .post('http://138.197.28.192/pb/Signup', formData)
+    .post('http://159.203.70.22:3002/Signup', formData)
     .then((response) => {
       setSuccessMessage(response.data.message);
       setError('');
